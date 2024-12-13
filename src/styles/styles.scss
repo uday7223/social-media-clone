@@ -1,0 +1,39 @@
+// $primary-color: #007bff;
+
+body {
+//   background-color: $primary-color;
+  font-family: Arial, sans-serif;
+  background-color: aquamarine;
+
+  .topHeader{
+    .topHeader-con{
+        .header-fields{
+            ul{
+                li{
+                    list-style: none;
+                    padding: 1rem;
+                    // font-size: large;
+                    font-weight: 600;
+                    width: 10%;
+                    height: 8%;
+                    border: 0.4px solid black;
+                    text-align: center;
+                    text-wrap: wrap;
+                    transition: all 0.3s ease;
+                    border-radius: 30px;
+                    
+                }
+                li:hover{
+                        background-color: aqua;
+                        cursor: pointer;
+
+                }
+                li:active{
+                    background-color: rgba(228, 241, 241, 0.534);
+
+            }
+            }
+        }
+    }
+  }
+}
