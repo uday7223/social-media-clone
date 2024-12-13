@@ -56,17 +56,19 @@ const PostList = () => {
     }, []);
 
     return (
-        <div>
-            <h1>All Posts</h1>
+        <div className='postlist-con rounded ms-5 p-3 border w-50'>
+            <h1 className='text-center'>All Posts</h1>
+            <div className="inner-container border">
             <ul>
                 {posts.map((post) => (
-                    <li key={post.id}>
+                    <li key={post.id} className='mb-3 mt-3'>
                         <h2>{post.title}</h2>
                         <p>{post.content}</p>
-                        <Link to={`/posts/${post.id}`}>View Post</Link>
+                        <Link to={`/posts/${post.id}`} className='border py-2 px-4 text-decoration-none rounded '>View Post</Link>
                     </li>
                 ))}
             </ul>
+            </div>
         </div>
     );
 };

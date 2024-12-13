@@ -1,24 +1,50 @@
 {
-    "users": [
-      { "id": 1, "name": "John Doe", "username": "johndoe", "password": "12345" },
-      { "id": 2, "name": "Jane Doe", "username": "janedoe", "password": "12345" }
-    ],
-    "posts": [
-      {
-        "id": 1,
-        "title": "First Post",
-        "content": "This is the first post content",
-        "comments": [
-          { "id": 1, "name": "John Doe", "text": "Great post!" },
-          { "id": 2, "name": "Jane Doe", "text": "Thanks for sharing." }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "Second Post",
-        "content": "This is the second post content",
-        "comments": []
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "username": "johndoe",
+      "password": "12345"
+    },
+    {
+      "id": "2",
+      "name": "Jane Doe",
+      "username": "janedoe",
+      "password": "12345"
+    },
+    {
+      "id": "e09d",
+      "username": "rajkumar",
+      "password": "1234"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "First Post",
+      "content": "This is the first post content",
+      "comments": [
+        {
+          "id": 1,
+          "name": "John Doe",
+          "text": "Great post!"
+        },
+        {
+          "id": 2,
+          "name": "Jane Doe",
+          "text": "Thanks for sharing."
+        },
+        {
+          "id": 3,
+          "text": "wow\n"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Second Post",
+      "content": "This is the second post content",
+      "comments": []
+    }
+  ]
+}
