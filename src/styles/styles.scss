@@ -6,7 +6,18 @@ body {
   background-color: aquamarine;
 
   .topHeader{
+    // width: 100px;
     .topHeader-con{
+        .logo{
+          p{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+            text-shadow: 1px 1px yellow;
+            height: 10%;
+            padding: 1rem;
+            font-size: 2rem;
+          }
+        }
         .header-fields{
             ul{
                 li{
@@ -14,22 +25,24 @@ body {
                     padding: 1rem;
                     // font-size: large;
                     font-weight: 600;
-                    width: 10%;
-                    height: 8%;
-                    border: 0.4px solid black;
+                    // height: 8%;
                     text-align: center;
                     text-wrap: wrap;
                     transition: all 0.3s ease;
                     border-radius: 30px;
+                    letter-spacing: 1px;
                     
                 }
                 li:hover{
-                        background-color: aqua;
+                        background-color: rgba(255, 92, 92, 0.83);
                         cursor: pointer;
+
 
                 }
                 li:active{
                     background-color: rgba(228, 241, 241, 0.534);
+                    border: 0.4px solid black;
+
 
             }
             }
