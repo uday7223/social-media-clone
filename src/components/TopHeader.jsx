@@ -11,11 +11,13 @@ const TopHeader = () => {
     }
     return (
         <>
-            <div className="topHeader">
-                <div className="topHeader-con pt-1">
-                <div className="logo"></div>
-                <div className="header-fields">
-                    <ul className='d-flex gap-5 justify-content-end me-5'>
+            <div className="topHeader border pe-5 align-items-center  " >
+                <div className="topHeader-con d-flex align-items-center justify-content-center">
+                <div className="logo">
+                    <p>POST IT!</p>
+                </div>
+                <div className="header-fields d-flex  justify-content-end">
+                    <ul className='d-flex gap-5 '>
                         <li>Home</li>
                         <li>Contact</li>
                         <li>About</li>

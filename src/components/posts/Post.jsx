@@ -64,7 +64,7 @@ const Post = () => {
     if (!post) return <p>Loading...</p>;
 
     return (
-        <div>
+        <div className='post-con container border rounded p-3'>
             <h1>{post.title}</h1>
             <p>{post.content}</p>
             <h2>Comments</h2>

@@ -31,7 +31,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         {/* <Route path="/postlist" element={<PostList />} /> */}
-        <Route path="/" element={<PostList />} />
+        <Route path="/postlist" element={<PostList />} />
         <Route path="/posts/:id" element={<Post />} />
 
       </Routes>
