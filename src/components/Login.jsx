@@ -20,7 +20,7 @@ const Login = () => {
 
             if (response.status === 200) {
                 const user = response.data.user; // Updated to match backend
-                localStorage.setItem('currentUser', JSON.stringify({ id: user.id, name: user.username })); // Save current user
+                localStorage.setItem('currentUser', JSON.stringify({ id: "uday", name: user.username })); // Save current user
 
                 navigate('/postlist');
             }

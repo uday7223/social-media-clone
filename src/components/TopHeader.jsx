@@ -5,7 +5,8 @@ const TopHeader = () => {
 
     const navigate = useNavigate();
 
-    const handleClick=()=>{
+    const handleLogout=()=>{
+        localStorage.clear(); // Clears all items in localStorage
         navigate('/login');
 
     }
@@ -21,7 +22,7 @@ const TopHeader = () => {
                         <li>Home</li>
                         <li>Contact</li>
                         <li>About</li>
-                        <li onClick={handleClick}>Logout</li>
+                        <li onClick={handleLogout}>Logout</li>
                     </ul>
                 </div>
                 </div>

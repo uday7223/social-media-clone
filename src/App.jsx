@@ -11,8 +11,7 @@ import Login from './components/Login';
 import LandingPage from './components/LandingPage';
 import TopHeader from './components/TopHeader';
 import PostList from './components/posts/PostList';
-import FetchUsers from './components/FetchUsers';
-import Post from './components/posts/Post';
+import CreatePost from './components/posts/CreatePost';
 
 
 
@@ -30,9 +29,8 @@ function App() {
       <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/postlist" element={<PostList />} /> */}
+        <Route path="/create-post" element={<CreatePost />} />
         <Route path="/postlist" element={<PostList />} />
-        <Route path="/posts/:id" element={<Post />} />
 
       </Routes>
     </div>
