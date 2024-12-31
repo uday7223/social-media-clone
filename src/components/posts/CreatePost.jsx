@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const CreatePost = () => {
+const CreatePost = ({ onPostAdded }) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [message, setMessage] = useState('');
@@ -20,6 +20,8 @@ const CreatePost = () => {
             });
 
             if (response.status === 201) {
+                onPostAdded(response.data); // Notify PostList
+                console.log(response.data);
                 setMessage('Post created successfully!');
                 setTitle('');
                 setContent('');
@@ -30,7 +32,7 @@ const CreatePost = () => {
     };
 
     return (
-        <div className="container border rounded p-5 my-5 w-50">
+        <div className=" border rounded p-5 my-5 w-50">
             <h2>Create Post</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">

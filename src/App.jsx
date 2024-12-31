@@ -10,13 +10,14 @@ import Register from './components/Register';
 import Login from './components/Login';
 import LandingPage from './components/LandingPage';
 import TopHeader from './components/TopHeader';
-import PostList from './components/posts/PostList';
 import CreatePost from './components/posts/CreatePost';
+import Dashboard from './components/Dashboard';
 
 
 
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
 
@@ -24,13 +25,13 @@ function App() {
             <BrowserRouter>
             <TopHeader/>
 
-    <div className="App">
+    <div className="appGlobal">
       <Routes>
       <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/create-post" element={<CreatePost />} />
-        <Route path="/postlist" element={<PostList />} />
+        {/* <Route path="/create-post" element={<CreatePost />} /> */}
+        <Route path="/dashboard" element={<Dashboard />} />
 
       </Routes>
     </div>
