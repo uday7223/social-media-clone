@@ -1,45 +1,8 @@
-// import { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import Post from './Post';
-// import FetchUsers from '../FetchUsers';
-
-// export default function PostList() {
-//   const [posts, setPosts] = useState([]);
-
-//   useEffect(() => {
-//     const fetchPosts = async () => {
-//       try {
-//         const response = await axios.get('http://localhost:5000/posts');
-//         setPosts(response.data);
-//       } catch (error) {
-//         console.error('Error fetching posts:', error);
-//       }
-//     };
-
-//     fetchPosts();
-//   }, []);
-
-//   return (
-//     <div className='postlist border border-1 rounded m-3 w-50 p-4'>
-//      <div>
-//      <h2>Dashboard</h2>
-//      <div className="posts border">
-//      {posts.map((post) => (
-//         <Post key={post.id} post={post} />
-//       ))}
-//      </div>
-//      </div>
-//      <div>
-
-//      </div>
-//     </div>
-//   );
-// }
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import CreatePost from './CreatePost';
 
-const PostList = () => {
+const PostList = ({ newPost }) => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
@@ -47,27 +10,32 @@ const PostList = () => {
             try {
                 const response = await axios.get('http://localhost:5000/posts');
                 setPosts(response.data);
-            } catch (error) {
-                console.error('Error fetching posts:', error);
+            } catch (err) {
+                console.error('Error fetching posts:', err);
             }
         };
 
         fetchPosts();
     }, []);
 
+    // Update post list when a new post is added
+    useEffect(() => {
+        if (newPost) {
+            setPosts((prevPosts) => [newPost, ...prevPosts]);
+        }
+    }, [newPost]);
+    
     return (
-        <div className='postlist-con rounded ms-5 p-3 border w-50'>
-            <h1 className='text-center'>All Posts</h1>
-            <div className="inner-container border">
-            <ul>
+        <div className="container">
+            <h2>All Posts</h2>
+            <div className="list-group">
                 {posts.map((post) => (
-                    <li key={post.id} className='mb-3 mt-3'>
-                        <h2>{post.title}</h2>
+                    <div key={post.post_id || post.id || post._id} className="list-group-item">
+                        <h5>{post.title}</h5>
                         <p>{post.content}</p>
-                        <Link to={`/posts/${post.id}`} className='border py-2 px-4 text-decoration-none rounded '>View Post</Link>
-                    </li>
+                        <small>By: {post.username} on {new Date(post.created_at).toLocaleString()}</small>
+                    </div>
                 ))}
-            </ul>
             </div>
         </div>
     );
