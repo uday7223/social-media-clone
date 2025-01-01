@@ -22,7 +22,7 @@ const Login = () => {
                 const user = response.data.user; // Updated to match backend
                 localStorage.setItem('currentUser', JSON.stringify({ id: user.user_id, name: user.username })); // Save current user
                 
-                navigate('/dashboard');
+                navigate('/landingpage');
             }
         } catch (err) {
             if (err.response && err.response.status === 401) {

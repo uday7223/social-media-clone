@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import sendIcon2 from '../../assets/arrow-up.svg'
 
 const CreatePost = ({ onPostAdded }) => {
     const [title, setTitle] = useState('');
@@ -21,7 +22,7 @@ const CreatePost = ({ onPostAdded }) => {
 
             if (response.status === 201) {
                 onPostAdded(response.data); // Notify PostList
-                console.log(response.data);
+                // console.log(response.data);
                 setMessage('Post created successfully!');
                 setTitle('');
                 setContent('');
@@ -32,7 +33,7 @@ const CreatePost = ({ onPostAdded }) => {
     };
 
     return (
-        <div className=" border rounded p-5 my-5 w-50">
+        <div className=" border rounded p-5 my-5 w-50 create-post ms-2">
             <h2>Create Post</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -55,7 +56,9 @@ const CreatePost = ({ onPostAdded }) => {
                         required
                     />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className=" send-btn px-3 py-2 d-flex"> 
+                post it ! <img src={sendIcon2} alt="" className='icon ms-2' />
+                   </button>
                 {message && <p className="mt-3">{message}</p>}
             </form>
         </div>

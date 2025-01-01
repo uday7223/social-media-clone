@@ -5,24 +5,110 @@ body {
   font-family: Arial, sans-serif;
   background-color: aquamarine;
 
+  .logo{
+         
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px yellow;
+    height: 10%;
+    font-size: 2rem;
+    transition: all 0.3s ease-out;
+  
+}
+
+.logo:hover{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  text-shadow: 5px 5px rgb(251, 255, 0);
+  height: 10%;
+  font-size: 2rem;
+
+  // text-shadow: 5px 5px 1px black;
+}
+
+.icon{
+  width: 28px;
+}
+
+.btn-one{
+  border : none;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: rgba(0, 225, 255, 0.527);
+  color: rgb(0, 0, 0);
+  transition: all 0.1s ease-in;
+}
+.btn-one:hover{
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+} 
+.btn-one:active{
+  background-color: rgba(0, 225, 255, 0.201);
+
+} 
+// .nav-link {
+//   color: #000;
+//   transition: color 0.3s ease;
+// }
+
+// .nav-link:hover {
+//   color: #007bff;
+// }
+
+.nav-link.active {
+  font-weight: bold;
+  // border-bottom: 2px solid #007bff;
+  background-color: rgba(255, 92, 92, 0.83);
+  border-radius: 30px;
+
+}
+
+
+
+//=========================================================
+
+.landing-page{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  .con{
+    // border-top: 1px  solid black;
+    border-bottom: 1px  solid black;
+
+  }
+
+
+  
+  h2{
+    text-align: center;
+  }
+  span{
+    color: rgb(210, 30, 171);
+  }
+  p{
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+
+
+.postList{
+  z-index: 1000 !important;
+
+}
   .topHeader{
+    // position: sticky;
+    // top: 0px;
+    // z-index: 0 !important;
     // width: 100px;
     .topHeader-con{
-        .logo{
-          p{
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 600;
-            text-shadow: 1px 1px yellow;
-            height: 10%;
-            padding: 1rem;
-            font-size: 2rem;
-          }
-        }
+
         .header-fields{
             ul{
                 li{
                     list-style: none;
-                    padding: 1rem;
+                    padding: 0.2rem;
                     // font-size: large;
                     font-weight: 600;
                     // height: 8%;
@@ -31,6 +117,7 @@ body {
                     transition: all 0.3s ease;
                     border-radius: 30px;
                     letter-spacing: 1px;
+                    margin-left: 2.5rem;
                     
                 }
                 li:hover{
@@ -41,12 +128,75 @@ body {
                 }
                 li:active{
                     background-color: rgba(228, 241, 241, 0.534);
-                    border: 0.4px solid black;
+                    // border: 0.4px solid black;
 
 
             }
             }
         }
     }
+  }
+
+  .about{
+    img{
+      width: 80%;
+      height: 40vh;
+      box-shadow: 20px 20px 0px 1px rgba(255, 92, 92, 0.83); 
+      border:4px solid rgba(0, 0, 0, 0.205) ;
+    }
+  }
+
+  .create-post{
+    height: 45vh;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+     .send-btn{
+      border : none;
+      font-weight: 600;
+      border-radius: 6px;
+      background-color: rgba(0, 225, 255, 0.527);
+      color: rgb(0, 0, 0);
+      transition: all 0.1s ease-in;
+    } 
+    .send-btn:hover{
+      box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    } 
+    .send-btn:active{
+      background-color: rgba(0, 225, 255, 0.201);
+
+    } 
+  }
+
+
+
+  .postList-con{
+    // box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    z-index: 200;
+
+    img{
+      width: 2rem;
+    }
+    
+    .user-name{
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+
+  }
+
+  .comment-form{
+    width: 50%;
+    
+    .comment-btn{
+      background-color: rgba(255, 166, 0, 0.886)  ;
+    }
+    .comment-btn:active{
+      background-color: rgba(255, 166, 0, 0.66)  ;
+    }
+  }
+
+  .comments-list{
+    width: 50%;
   }
 }
