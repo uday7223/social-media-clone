@@ -28,7 +28,7 @@ const CommentForm = ({ post_id, onCommentAdded }) => {
     };
 
     return (
-       <div className="comment-form">
+       <div className="comment-form ms-4 mt-2">
          <form onSubmit={handleSubmit} className="mb-3">
             <textarea 
                 className="form-control mb-2"
