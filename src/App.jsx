@@ -12,6 +12,8 @@ import LandingPage from './components/LandingPage';
 import TopHeader from './components/TopHeader';
 import CreatePost from './components/posts/CreatePost';
 import Dashboard from './components/Dashboard';
+import About from './components/About';
+import ContactUs from './components/ContactUs';
 
 
 
@@ -32,6 +34,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         {/* <Route path="/create-post" element={<CreatePost />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path='/about' element={<About/>}/>
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/landingpage" element={<LandingPage />} />
 
       </Routes>
     </div>
