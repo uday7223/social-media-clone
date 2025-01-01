@@ -14,7 +14,7 @@ const Dashboard = () => {
     return (
      
 
-            <div className='d-flex'>
+            <div className='dashboard'>
 
                 <CreatePost onPostAdded={handlePostAdded} />
                 <PostList newPost={newPost} />
