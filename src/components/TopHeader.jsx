@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
+import LogoutModal from './modals/LogoutModal';
 
 const TopHeader = () => {
 
+    const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
 
     const handleLogout = () => {
+        // Simulate logout logic
+        // localStorage.removeItem('userToken');
         localStorage.clear(); // Clears all items in localStorage
-        navigate('/login');
+        navigate('/login');  // Redirect to login page after logout
+        setShowModal(false)
+    };
 
-    }
+  
     return (
 
 
@@ -52,13 +58,16 @@ const TopHeader = () => {
                                         About Us
                                     </NavLink>
                                 </li>
-                                <li className="nav-item" onClick={handleLogout}>
+                                <li className="nav-item">
                                     <NavLink
-                                        className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
-                                        to="/logout"
-                                    >
-                                        Logout
-                                    </NavLink>
+                                        className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={() => setShowModal(true)}> logout
+                                                              
+                           </NavLink>
+                            <LogoutModal
+                                            showModal={showModal}
+                                            handleClose={() => setShowModal(false)}
+                                            handleLogout={handleLogout}
+                                        />  
                                 </li>
                             </ul>
                         </div>
