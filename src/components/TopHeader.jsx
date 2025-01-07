@@ -1,29 +1,25 @@
 import React, { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import LogoutModal from './modals/LogoutModal';
+import ProfilePage from './profile/ProfilePage';
+import img6 from '../assets/profileImages/img6.svg'
 
 const TopHeader = () => {
 
-    const [showModal, setShowModal] = useState(false);
-    const navigate = useNavigate();
+    const [showProfileModal, SetshowProfileModal]=useState(false)
+    const user = JSON.parse(localStorage.getItem('currentUser'));
 
-    const handleLogout = () => {
-        // Simulate logout logic
-        // localStorage.removeItem('userToken');
-        localStorage.clear(); // Clears all items in localStorage
-        navigate('/login');  // Redirect to login page after logout
-        setShowModal(false)
-    };
 
+   
+    
   
     return (
-
-
+        <>
         <div className="topHeader">
             <div className="topHeader-con">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4 ">
                     <div className="container-fluid ">
-                        <Link className="navbar-brand logo" to="/">POST IT!</Link>
+                        <Link className="navbar-brand logo" to="#">POST IT!</Link>
                         <div className="collapse navbar-collapse header-fields">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
@@ -38,6 +34,8 @@ const TopHeader = () => {
                                     <NavLink
                                         className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
                                         to="/dashboard"
+                                        // style={{ pointerEvents: user ? 'auto' : 'none', opacity: user ? 1 : 0.5 }}
+
                                     >
                                         Dashboard
                                     </NavLink>
@@ -58,24 +56,32 @@ const TopHeader = () => {
                                         About Us
                                     </NavLink>
                                 </li>
-                                <li className="nav-item">
-                                    <NavLink
-                                        className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={() => setShowModal(true)}> logout
-                                                              
+                         
+                                <li className="nav-item profileIcon">
+                                <NavLink
+                                        onClick={() => SetshowProfileModal((prev)=>!prev)}> <img src={img6} alt="" className='me-4'/>
+                                        
                            </NavLink>
-                            <LogoutModal
-                                            showModal={showModal}
-                                            handleClose={() => setShowModal(false)}
-                                            handleLogout={handleLogout}
-                                        />  
+                                   
+                           
+                          
                                 </li>
                             </ul>
+                            
                         </div>
                     </div>
                 </nav>
             </div>
+          
         </div>
+        <ProfilePage
+                                   showProfileModal={showProfileModal} SetshowProfileModal={SetshowProfileModal}
+                           />
+            
+        </>
 
+        
+    
 
 
 

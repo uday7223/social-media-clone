@@ -69,7 +69,7 @@ export default function Register() {
   Login
 </button>
       </form>
-      {message && <div className="mt-3">{message}</div>}
+      {message && <div className="mt-3" style={{color:"red"}}>{message}</div>}
     </div>
   );
 }

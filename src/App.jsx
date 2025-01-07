@@ -14,6 +14,7 @@ import CreatePost from './components/posts/CreatePost';
 import Dashboard from './components/Dashboard';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
+import ProfilePage from './components/profile/ProfilePage';
 
 
 
@@ -37,6 +38,8 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="/profile/:userId" element={<ProfilePage />} />
+
 
       </Routes>
     </div>

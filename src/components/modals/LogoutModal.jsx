@@ -13,17 +13,13 @@ const LogoutModal = ({ showModal, handleClose, handleLogout }) => {
             <div className="modal-content">
                 <h4>Confirm Logout</h4>
                 <p>Are you sure you want to logout?</p>
-                <div className="modal-actions">
+                <div className="d-flex justify-content-around">
                     <button className="btn btn-danger" onClick={handleLogout}>Logout</button>
                     <button className="btn btn-secondary" onClick={handleClose}>Cancel</button>
                 </div>
             </div>
         </div>
-                {/* <p>are you sure ?</p>
-                <div>
-                    <button className='btn' onClick={handleLogout}>Yes</button>
-                    <button className='btn'> No</button>
-                </div> */}
+               
             </div>
         </div>
 
