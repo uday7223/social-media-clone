@@ -8,25 +8,17 @@ export default function Register() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.post("http://localhost:5000/register", {
-        username,
-        password
-      });
-
+      const response = await axios.post("http://localhost:5000/register", { username, password });
       if (response.status === 201) {
         setMessage("User registered successfully!");
         setUsername("");
         setPassword("");
-        navigate('/login');
-
+        navigate("/login");
       }
     } catch (error) {
-      console.error("Error registering user:", error);
       setMessage(error.response?.data?.message || "Registration failed. Please try again.");
     }
   };
@@ -40,7 +32,6 @@ export default function Register() {
           <input
             type="text"
             className="form-control"
-            placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
@@ -51,7 +42,6 @@ export default function Register() {
           <input
             type="password"
             className="form-control"
-            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -59,17 +49,14 @@ export default function Register() {
         </div>
         <button type="submit" className="btn btn-primary">Register</button>
         <button
-  type="button"
-  className="btn border ms-4 px-4 py-2"
-  onClick={(e) => {
-    e.preventDefault();
-    navigate("/login");
-  }}
->
-  Login
-</button>
+          type="button"
+          className="btn border ms-4 px-4 py-2"
+          onClick={() => navigate("/login")}
+        >
+          Login
+        </button>
       </form>
-      {message && <div className="mt-3">{message}</div>}
+      {message && <div className="mt-3 text-danger">{message}</div>}
     </div>
   );
 }

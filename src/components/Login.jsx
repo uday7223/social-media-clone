@@ -25,12 +25,14 @@ const Login = () => {
                 navigate('/landingpage');
             }
         } catch (err) {
+            console.error(err);  // Log for debugging
             if (err.response && err.response.status === 401) {
                 setError('Invalid username or password.');
             } else {
                 setError('Failed to log in. Please try again later.');
             }
         }
+        
     };
 
     return (
