@@ -13,7 +13,7 @@ const About = () => {
                             <div className="col-lg-8 text-center">
                                 <h1 className="logo">About POST IT!</h1>
                                 <p className="lead mt-3">
-                                    Welcome to <strong>SocialVibe</strong>, the ultimate platform for sharing your thoughts and connecting with friends.
+                                    Welcome to <strong>POST IT</strong>, the ultimate platform for sharing your thoughts and connecting with friends.
                                 </p>
                                 <p>
                                     Our mission is to create a space where users can freely express themselves by uploading new posts, interacting with others, and growing their online presence.

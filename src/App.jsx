@@ -31,8 +31,9 @@ function App() {
     <div className="appGlobal">
       <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+       
         {/* <Route path="/create-post" element={<CreatePost />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path='/about' element={<About/>}/>
