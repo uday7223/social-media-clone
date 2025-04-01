@@ -67,13 +67,14 @@ const TopHeader = () => {
             </div>
           </nav>
         </div>
-      </div>
-      {showProfileModal && (
+        {showProfileModal && (
         <ProfilePage
           showProfileModal={showProfileModal}
           SetshowProfileModal={SetshowProfileModal}
         />
       )}
+      </div>
+    
     </>
   );
 };

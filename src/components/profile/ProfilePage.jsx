@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import EditProfileModal from '../modals/EditProfileModal';
-import img2 from '../../assets/profileImages/img3.svg';
+import img2 from '../../assets/profileImages/img1.svg';
 import { NavLink, useNavigate } from 'react-router-dom';
 import LogoutModal from '../modals/LogoutModal';
 
@@ -60,10 +60,13 @@ const ProfilePage = ({ showProfileModal,SetshowProfileModal  }) => {
     }
 
     return (
-        <div className="container profile-page mt-5">
+
+
+        <>
+              <div className="container profile-page mt-5">
             <div className="card p-4 text-center">
                 <img src={user.profile_picture || img2} alt="Profile" className="rounded-circle" width="150" />
-                <h2 style={{ color: "black" }}>{user.username || 'Guest'}</h2>
+                <h3 style={{ color: "black", textTransform: "capitalize" }}>{user.username || 'Guest'}</h3>
                 <p>{user.bio || "No bio available"}</p>
                 <button className="btn btn-primary" onClick={() => setShowModalEdit(true)}>
                     Edit Profile
@@ -89,6 +92,9 @@ const ProfilePage = ({ showProfileModal,SetshowProfileModal  }) => {
                 />
             }
         </div>
+        
+        </>
+      
     );
 };
 

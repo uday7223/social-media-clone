@@ -11,7 +11,7 @@ const LandingPage = () => {
         <>
             <div className="landing-page">
                 <div className="container con p-5">
-                    <h2 className=' '>hey there <span>{user?.name } </span>, Welcome to POST IT !</h2> <br />
+                    <h2 className=' '>hey there <span style={{ textTransform: "capitalize" }}>{user?.name } </span>, Welcome to POST IT !</h2> <br />
                     <p>"Where Every Post Tells a Story – Connect with <span>Friends</span>, Share Your <span>Moments</span>, and Join <span>Conversations</span> That Matter!"
                     </p>
 

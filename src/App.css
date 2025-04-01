@@ -1,0 +1,63 @@
+@import "./styles/global.scss";
+
+@font-face {
+    font-family: SourceSansPro-Light;
+    src: url('../src/assets/fonts/source_sans_pro/ttf/source-sans-pro-latin-300-normal.ttf');
+  }
+  
+  @font-face {
+    font-family: SourceSansPro-Regular;
+    src: url('../src/assets/fonts/source_sans_pro/ttf/source-sans-pro-latin-400-normal.ttf');
+  }
+  
+  @font-face {
+    font-family: SourceSansPro-Semibold;
+    src: url('../src/assets/fonts/source_sans_pro/ttf/source-sans-pro-latin-600-normal.ttf');
+  }
+  
+  @font-face {
+    font-family: SourceSansPro-Bold;
+    src: url('../src/assets/fonts/source_sans_pro/ttf/source-sans-pro-latin-700-normal.ttf');
+  }
+  @font-face {
+    font-family: SourceSansPro-Extra-Bold;
+    src: url('../src/assets/fonts/source_sans_pro/ttf/source-sans-pro-latin-900-normal.ttf');
+  }
+  
+  
+  
+  * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  .fwSemiBold{
+    font-family: SourceSansPro-Semibold !important;
+  }
+  
+  .fwBold{
+    font-family: SourceSansPro-Bold !important;
+  }
+  
+  .fsExtraBold{
+    font-family: SourceSansPro-Extra-Bold;
+  }
+  
+  body {
+    font-family: SourceSansPro-Regular;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body.no-scroll {
+    overflow: hidden;
+  }
+  
+  body.no-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  

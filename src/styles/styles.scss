@@ -1,6 +1,9 @@
 // $primary-color: #007bff;
 $boxshadow1 : 0px 0px 15px 1px black;
 
+
+
+
 body {
 //   background-color: $primary-color;
   font-family: Arial, sans-serif;
@@ -175,13 +178,21 @@ body {
 .dashboard{
   width: 100%;
   display: flex;
+  position: absolute;
+  // right: 0px;
+  top: 20px;
+}
+.contact{
+  position: relative;
+  top: 30px;
 }
 
 .postList{
-  z-index: 1000 !important;
+  z-index: 0 !important;
   width: 30%;
   position: absolute;
   right: 0px;
+  top: 20px;
 
   .timeStamp{
     font-size: 12px;
@@ -220,27 +231,37 @@ body {
 
 }
 
-.profile-page .card {
-  max-width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: 10px;
-  right: 5%;
-  z-index: 1001 !important;
+.profile-page {
+  position: relative !important;
+  .card {
+    max-width: 350px;
+    width: 20%;
+    margin: 0 auto;
+    position: relative !important;
+    top: -40px;
+    right: -40% !important;
+    z-index: 1001 !important;
+    box-shadow: 1px 1px 30px -10px rgba(0, 0, 0, 0.704);
 
-  img{
-    width: 8rem;
-    height: 8rem;
-    box-shadow: $boxshadow1;
+  
+    img{
+      width: 5rem;
+      height: 5rem;
+      box-shadow: $boxshadow1;
+      border: 2px solid rgb(255, 255, 255);
+      display: inline-block;
+      margin: auto;
+    }
+  
   }
-
 }
 
 .topHeader{
-  // position: sticky;
-  // top: 0px;
-  // z-index: 0 !important;
-  // width: 100px;
+  position: fixed;
+  top: 0px;
+  z-index: 10 !important;
+  width: 100%;
+  margin-bottom: 20px;
   .topHeader-con{
 
       .header-fields{
@@ -287,6 +308,9 @@ body {
 }
 
 .about{
+  position: relative;
+  top: 80px;
+
   img{
     width: 80%;
     height: 40vh;
@@ -296,7 +320,10 @@ body {
 }
 
 .create-post{
-  height: 45vh;
+  z-index: 0 !important;
+ 
+  position: fixed;
+    top:30px  !important;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     .send-btn{
     border : none;
@@ -343,21 +370,5 @@ body {
     background-color: rgba(144, 238, 144, 0.601);
   }
 
-  .profile-page{
-    position: absolute;
-    top: 1rem;
-    left: 32rem;
-    
 
-    .card{
-      width: 20%;
-      box-shadow: 1px 1px 30px -10px rgba(0, 0, 0, 0.704);
-
-    }
-    img{
-      display: inline-block;
-      margin: auto;
-    }
-
-  }
 }
