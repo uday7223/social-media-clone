@@ -57,7 +57,7 @@ const CreatePost = ({ onPostAdded }) => {
                     />
                 </div>
                 <button type="submit" className=" send-btn px-3 py-2 d-flex"> 
-                post it ! <img src={sendIcon2} alt="" className='icon ms-2' />
+                    <span className="">POST IT</span>
                    </button>
                 {message && <p className="mt-3">{message}</p>}
             </form>

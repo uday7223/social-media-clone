@@ -68,18 +68,26 @@ const ProfilePage = ({ showProfileModal,SetshowProfileModal  }) => {
                 <img src={user.profile_picture || img2} alt="Profile" className="rounded-circle" width="150" />
                 <h3 style={{ color: "black", textTransform: "capitalize" }}>{user.username || 'Guest'}</h3>
                 <p>{user.bio || "No bio available"}</p>
-                <button className="btn btn-primary" onClick={() => setShowModalEdit(true)}>
+                <button className="btn btn-primary" 
+                    data-bs-toggle="modal"
+                    data-bs-target="#editProfileModal"
+                onClick={() => setShowModalEdit(true)}>
                     Edit Profile
                 </button>
                 <button
                     className="btn btn-dark mt-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#logoutModal"
 
                     onClick={() => setShowModal(true)}
                 >
                     Logout
                 </button>
             </div>
-            <LogoutModal
+            
+        </div>
+
+        <LogoutModal
                 showModal={showModal}
                 handleClose={() => setShowModal(false)}
                 handleLogout={handleLogout}
@@ -91,7 +99,6 @@ const ProfilePage = ({ showProfileModal,SetshowProfileModal  }) => {
                     onUpdate={(updatedUser) => setUser(updatedUser)}
                 />
             }
-        </div>
         
         </>
       

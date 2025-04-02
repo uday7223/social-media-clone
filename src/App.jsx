@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss'
 import './styles/styles.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -28,7 +28,7 @@ function App() {
             <BrowserRouter>
             <TopHeader/>
 
-    <div className="appGlobal">
+    <div className="web-global">
       <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<Login />} />
